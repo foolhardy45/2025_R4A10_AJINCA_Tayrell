@@ -13,41 +13,70 @@ function getEmployees() {
 module.exports = {
   // 1) Renvoyer un nouveau tableau qui ne garde que les personnes dont le nom se termine par un "e"
   B1() {
-    // Implémentation ici
+    let newArray = [];
+    for (let i = 0; i < getEmployees().length; i++) {
+      if(getEmployees()[i].name.endsWith("e")){
+        newArray.push(getEmployees()[i]);
+      }
+    }
+    return newArray;
   },
 
   // 2) Trouver la première personne dont l'âge est inférieur à 30
   B2() {
-    // Implémentation ici
+    for (let i = 0; i < getEmployees().length; i++) {
+      if(getEmployees()[i].age < 30){
+        return getEmployees()[i];
+      }
+    }
   },
 
   // 3) Renvoyer l'index où se trouve "Jeremy"
   B3() {
-    // Implémentation ici
+    for (let i = 0; i < getEmployees().length; i++) {
+      if (getEmployees()[i].name === "Jeremy") {
+        return i;
+      }
+    }
   },
 
   // 4) Trier le tableau par âge des personnes
   B4() {
-    // Implémentation ici
+    let newArray = [];
+    newArray = getEmployees().sort((a, b) => a.age - b.age);
+    return newArray;
   },
 
   // 5) Ajouter Kasimu à la fin du tableau, il a 38 ans, et renvoyer le tableau modifié
   B5() {
-    // Implémentation ici
+    let newArray = [];
+    newArray = getEmployees().push({name: "Kasimu", age: "38"});
+    return newArray;
   },
 
   // 6) Renvoyer la longueur du tableau
   B6() {
-    // Implémentation ici
+    return getEmployees().length;
   },
 
   // 7) Remplacer le "o" de Theo par un "a", et renvoyer le tableau modifié
   B7() {
-    // Implémentation ici
+    let newArray = getEmployees();
+    for (let i = 0; i < getEmployees().length; i++) {
+      if(getEmployees()[i].name === "Theo"){
+        newArray[i].name = "Thea";
+      }
+    }
+    return newArray;
   },
 
   // 8) Renvoyer un tableau qui ne contient que les personnes ayant au moins un "e" dans leur nom
   B8() {
-    // Implémentation ici
+    let newArray = getEmployees();
+    for (let i = 0; i < getEmployees().length; i++) {
+      if(!getEmployees()[i].name.includes("e")){
+        newArray.splice(i, 1);
+      }
+    }
   },
 };

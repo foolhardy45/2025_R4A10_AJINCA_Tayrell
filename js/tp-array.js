@@ -34,18 +34,21 @@ module.exports = {
   Q3() {
     let newArray = [];
     newArray = getArray().reverse();
+    return newArray;
   },
 
   //4) Trier le tableau dans l'ordre croissant, renvoyez le tableau trié
   Q4() {
     let newArray = [];
     newArray = getArray().sort();
+    return newArray;
   },
 
   //5) Ajouter la valeur 0 en premier index du tableau, renvoyez le tableau modifié
   Q5() {
     let newArray = [];
     newArray = getArray().unshift(0);
+    return newArray;
   },
 
   //6) Faire la somme des éléments du tableau avec une boucle for. Renvoyez la somme
