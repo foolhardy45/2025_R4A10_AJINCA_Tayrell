@@ -19,6 +19,7 @@ module.exports = {
         newArray.push(getArray()[i]);
       }
     }
+    return newArray;
   },
 
   //2) Renvoyer l'index de la première valeur strictement inférieure à 7
@@ -40,14 +41,14 @@ module.exports = {
   //4) Trier le tableau dans l'ordre croissant, renvoyez le tableau trié
   Q4() {
     let newArray = [];
-    newArray = getArray().sort();
+    newArray = getArray().sort((a,b) => a - b);
     return newArray;
   },
 
   //5) Ajouter la valeur 0 en premier index du tableau, renvoyez le tableau modifié
   Q5() {
-    let newArray = [];
-    newArray = getArray().unshift(0);
+    let newArray = getArray();
+    newArray.unshift(0);
     return newArray;
   },
 
@@ -81,7 +82,8 @@ module.exports = {
   //9) Retirer le dernier index, renvoyez le tableau
   Q9() {
     let newArray = getArray();
-    return newArray.pop();
+    newArray.pop();
+    return newArray
     
   },
 

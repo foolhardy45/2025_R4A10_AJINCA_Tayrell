@@ -49,8 +49,8 @@ module.exports = {
 
   // 5) Ajouter Kasimu à la fin du tableau, il a 38 ans, et renvoyer le tableau modifié
   B5() {
-    let newArray = [];
-    newArray = getEmployees().push({name: "Kasimu", age: "38"});
+    let newArray = getEmployees();
+    newArray.push({name: "Kasimu", age: "38"});
     return newArray;
   },
 
@@ -78,5 +78,6 @@ module.exports = {
         newArray.splice(i, 1);
       }
     }
+    return newArray;
   },
 };
