@@ -70,7 +70,7 @@ footer{
         grid-template-columns: 1fr;
     }
     footer{
-        display: inline-block;
+        display: flex;
         justify-content: center;
         
     }
