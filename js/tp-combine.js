@@ -2,11 +2,11 @@
 // Chaque question est indépendante, et se base sur ce tableau initial
 function getEmployees() {
   return [
-    { name: "Thomas", age: "30" },
-    { name: "Theo", age: "25" },
-    { name: "Philippe", age: "45" },
-    { name: "Jeremy", age: "28" },
-    { name: "Minnie", age: "50" },
+    { name: "Thomas", age: 30 },
+    { name: "Theo", age: 25 },
+    { name: "Philippe", age: 45 },
+    { name: "Jeremy", age: 28 },
+    { name: "Minnie", age: 50 },
   ];
 }
 
@@ -25,7 +25,7 @@ module.exports = {
   // 2) Trouver la première personne dont l'âge est inférieur à 30
   B2() {
     for (let i = 0; i < getEmployees().length; i++) {
-      if(getEmployees()[i].age < 30){
+      if (getEmployees()[i].age < 30) {
         return getEmployees()[i];
       }
     }
@@ -50,7 +50,7 @@ module.exports = {
   // 5) Ajouter Kasimu à la fin du tableau, il a 38 ans, et renvoyer le tableau modifié
   B5() {
     let newArray = getEmployees();
-    newArray.push({name: "Kasimu", age: "38"});
+    newArray.push({name: "Kasimu", age: 38});
     return newArray;
   },
 
