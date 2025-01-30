@@ -16,6 +16,12 @@ header{
     border-color: gray;
 }
 
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1{
    display: inline-flex;
 }
@@ -65,7 +71,7 @@ footer{
     }
     footer{
         display: inline-block;
-        justify-content: safe;
+        justify-content: center;
         
     }
     
